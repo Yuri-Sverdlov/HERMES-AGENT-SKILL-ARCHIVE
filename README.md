@@ -1,18 +1,31 @@
 # Архив инструментов Hermes Agent — инструкция по переносу
 
-Дата сборки: 24 августа 2026 (обновлено)
+Дата сборки: 24 августа 2026 · обновлено 17 сентября 2026
+
+> **Как устроен и как поддерживается этот архив** (синхронизация с Hermes,
+> правила обновления, назначение CHANGELOG) — см. отдельный файл
+> [`SYNC-LOGIC.md`](SYNC-LOGIC.md). Журнал изменений человеческим языком —
+> [`CHANGELOG.md`](CHANGELOG.md). Этот README — инструкция по **установке** на
+> новом устройстве.
 
 ## Что в архиве
 
-6 скиллов и 3 Python-скрипта для пяти задач:
+8 скиллов и 3 Python-скрипта:
 
 | Задача | Скиллы | Скрипты |
 |---|---|---|
 | Управление GUI-приложениями в фоне | `computer-use` | — |
-| Плейлист: скачать N видео по списку | `playlist-downloader` | — |
-| Скачивание одного видео | `video-url-extractor` + `multithread-downloader` | `scripts/smart_dl.py` |
+| Скачивание одного видео (быстро, диагностика 403/throttle) | `video-fetch` | `scripts/smart_dl.py` |
+| Резолв страницы/агрегатора в реальный источник видео | `video-source-resolve` | — |
+| Список из N видео: манифест, resume, verify | `video-batch-runner` | — |
+| Сжатие локального видео (пресеты A≈5×, B≈10×) | `video-compression` | — |
 | Распознавание скриншотов в Word | `screenshot-to-docx` | `scripts/create_docx_template.py` |
 | YouTube-ссылки из WhatsApp в Word | `whatsapp-yt-links` | — |
+| Инвентаризация проектов на компьютере | `overview-projects-on-computer` | — |
+
+> Устаревшие скиллы `playlist-downloader`, `video-url-extractor`,
+> `video-extraction`, `multithread-downloader` удалены — их функции переехали в
+> `video-fetch` / `video-batch-runner` / `video-source-resolve` (см. CHANGELOG).
 
 ---
 
