@@ -1,0 +1,4 @@
+python-docx
+pillow
+pytesseract
+yt-dlp

@@ -1,0 +1,908 @@
+{
+ "meta": {
+  "top_folder": "G:/AI",
+  "github_user": "Yuri-Sverdlov",
+  "updated": "2026-08-24"
+ },
+ "projects": {
+  "BOAZ-MATH-WORKBOOK": {
+   "name": "BOAZ_MATH_WORKBOOK",
+   "repo": "BOAZ_MATH_WORKBOOK",
+   "status": "спящий",
+   "purpose": "Тренажёр таблицы умножения и деления (веб)",
+   "func": "Интерактивный генератор упражнений — переиспользуемо для обучающих приложений",
+   "lang": "JavaScript",
+   "note": "GIT, last push 14.05.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/BOAZ_MATH_WORKBOOK"
+   ]
+  },
+  "POST-MAIL-AUTOMATION": {
+   "name": "POST-MAIL-AUTOMATION",
+   "repo": "POST-MAIL-AUTOMATION",
+   "status": "живой",
+   "purpose": "Автоматизация обработки входящей почты (imap_tools + OAuth2)",
+   "func": "OAuth2-авторизация почты, парсинг писем, шаблоны ответов — переиспользуемо для любой почтовой автоматизации",
+   "lang": "Python",
+   "note": "GIT, last push 24.07.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/POST-MAIL-AUTOMATION",
+    "G:/AI/_MY_PROGRAMSING/POST-MAIL-AUTOMATION"
+   ]
+  },
+  "DB-WRITING-SYSTEM": {
+   "name": "DB-WRITING-SYSTEM",
+   "repo": null,
+   "status": "живой",
+   "purpose": "Система записи текстов/контента в базу данных через ИИ-агентов",
+   "func": "Пайплайн генерации → запись в БД; CSV-логика, CLI-агент",
+   "lang": "Python",
+   "note": "GIT (локальный), 22.08.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/DB-WRITING-SYSTEM",
+    "G:/AI/_MY_PROGRAMMING_4/DB-WRITING-SYSTEM"
+   ]
+  },
+  "DEEPSEEK-HARNESS": {
+   "name": "DEEPSEEK-HARNESS",
+   "repo": null,
+   "status": "живой",
+   "purpose": "Обвязка/хаба для работы с DeepSeek-моделями (GUI + проекты)",
+   "func": "GUI-обёртка, менеджер проектов, спеки — каркас для запуска LLM-агентов",
+   "lang": "Python",
+   "note": "22.08.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/DEEPSEEK-HARNESS"
+   ]
+  },
+  "HERMES-AGENT": {
+   "name": "HERMES-AGENT",
+   "repo": null,
+   "status": "живой",
+   "purpose": "Локальная копия/настройка Hermes Agent (Nous Research)",
+   "func": "Скиллы, конфиги, воркфлоу Hermes — переиспользуемо как эталон настройки",
+   "lang": "Python",
+   "note": "GIT (локальный), 22.08.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/HERMES-AGENT"
+   ]
+  },
+  "HERMES-ALL-IN-ONE": {
+   "name": "HERMES-ALL-IN-ONE",
+   "repo": null,
+   "status": "живой",
+   "purpose": "Сборка «всё в одном» для Hermes: гейтвей, VPS, tmux, проекты",
+   "func": "Скрипты запуска gateway, VPS-гайды, логи проектов — переиспользуемо для деплоя",
+   "lang": "Python",
+   "note": "GIT (локальный), 05.08.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/HERMES-ALL-IN-ONE"
+   ]
+  },
+  "LLM-KNOWLEDGE-BASE": {
+   "name": "LLM-KNOWLEDGE-BASE",
+   "repo": null,
+   "status": "живой",
+   "purpose": "База знаний на LLM (локальная, markdown-структура)",
+   "func": "Структура markdown-базы знаний + скрипты индексации — переиспользуемо",
+   "lang": "Python",
+   "note": "GIT (локальный), 09.07.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/LLM-KNOWLEDGE-BASE"
+   ]
+  },
+  "TRANSLATE-BOOK-IN-BROWSER": {
+   "name": "TRANSLATE-BOOK-IN-BROWSER",
+   "repo": null,
+   "status": "живой",
+   "purpose": "Перевод книги из скриншотов страниц (OCR + перевод на рус/иврит)",
+   "func": "OCR (Tesseract) + перевод (deep-translator) пайплайн — переиспользуемо для оцифровки книг",
+   "lang": "Python",
+   "note": "23.06.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/TRANSLATE-BOOK-IN-BROWSER"
+   ]
+  },
+  "PINOKIO-PROJECTS": {
+   "name": "PINOKIO-PROJECTS",
+   "repo": null,
+   "status": "живой",
+   "purpose": "Каталог/заметки по программам Pinokio",
+   "func": "—",
+   "lang": null,
+   "note": "24.08.2026 (сегодня)",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/PINOKIO-PROJECTS"
+   ]
+  },
+  "MY-HERMES": {
+   "name": "_MY-HERMES",
+   "repo": null,
+   "status": "живой",
+   "purpose": "Личная директория настройки Hermes",
+   "func": "—",
+   "lang": null,
+   "note": "26.07.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/_MY-HERMES"
+   ]
+  },
+  "N8N-WORKFLOW-BUILDER-STUDY": {
+   "name": "n8n-workflow-builder-study",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Изучение построения n8n-воркфлоу",
+   "func": "Примеры n8n-воркфлоу (TS) — переиспользуемо для автоматизаций",
+   "lang": "TypeScript",
+   "note": "GIT (локальный), 22.01.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/n8n-workflow-builder-study"
+   ]
+  },
+  "YOUTUBE-PLAYLIST-TRANSCRIPT": {
+   "name": "YOUTUBE-PLAYLIST-TRANSCRIPT",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Транскрибация YouTube-плейлистов",
+   "func": "Массовая расшифровка плейлистов",
+   "lang": null,
+   "note": "19.03.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/YOUTUBE-PLAYLIST-TRANSCRIPT"
+   ]
+  },
+  "TRAINER-MULTIPLICATION-TABLE": {
+   "name": "TRAINER-MULTIPLICATION-TABLE",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Тренажёр таблицы умножения (предшественник BOAZ_MATH_WORKBOOK)",
+   "func": "",
+   "lang": "JavaScript",
+   "note": "GIT, 13.11.2025 — замещён",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/TRAINER-MULTIPLICATION-TABLE"
+   ]
+  },
+  "ANTIGRAVITY-KILICODE-TEST": {
+   "name": "Antigravity-KiliCode-Test",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Тест Antigravity/KiliCode",
+   "func": "",
+   "lang": null,
+   "note": "25.02.2026, тест",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/Antigravity-KiliCode-Test"
+   ]
+  },
+  "ANTIGRAVITY-STORY-ORBITA": {
+   "name": "Antigravity-Story-Orbita",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Проект «Story Orbita» (генерация историй)",
+   "func": "",
+   "lang": "Python",
+   "note": "19.02.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/Antigravity-Story-Orbita"
+   ]
+  },
+  "AUTO-SAVE-CLIPBOARD": {
+   "name": "Auto-save clipboard",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Автосохранение буфера обмена",
+   "func": "",
+   "lang": "Python",
+   "note": "08.02.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/Auto-save clipboard"
+   ]
+  },
+  "AUTOMATION-LOWCONTENTBOOK-2": {
+   "name": "Automation_LowContentBook_2",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Автоматизация low-content книг (дубль AUTOMATION-LOWCONTENT-BOOK)",
+   "func": "",
+   "lang": null,
+   "note": "03.02.2026, дубликат",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/Automation_LowContentBook_2"
+   ]
+  },
+  "CLOUDE-IN-VS-CODE": {
+   "name": "CLOUDE_IN_VS_CODE",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Настройка Claude в VS Code",
+   "func": "",
+   "lang": "Python",
+   "note": "11.02.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/CLOUDE_IN_VS_CODE"
+   ]
+  },
+  "DOE-CONTENTAUTOMATION": {
+   "name": "DOE_ContentAutomation",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Автоматизация контента (DOE)",
+   "func": "",
+   "lang": "Python",
+   "note": "18.02.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/DOE_ContentAutomation"
+   ]
+  },
+  "DOE-ORIGINAL-TITLE": {
+   "name": "DOE_Original_Title",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Генерация оригинальных заголовков (DOE)",
+   "func": "",
+   "lang": "JavaScript",
+   "note": "15.02.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/DOE_Original_Title",
+    "G:/AI/_MY_PROGRAMMING_4/DOE-ORIGINAL-TITLE"
+   ]
+  },
+  "FINANCIAL-AUDIT": {
+   "name": "Financial audit",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Финансовый аудит",
+   "func": "",
+   "lang": null,
+   "note": "22.01.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/Financial audit"
+   ]
+  },
+  "LOTO": {
+   "name": "LOTO",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Проект «LOTO»",
+   "func": "",
+   "lang": "JavaScript",
+   "note": "09.02.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/LOTO"
+   ]
+  },
+  "MAKE-AUTOMAT": {
+   "name": "MAKE_AUTOMAT",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Автоматизация Make (старая)",
+   "func": "",
+   "lang": "TypeScript",
+   "note": "09.09.2024, ~2 года",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/MAKE_AUTOMAT"
+   ]
+  },
+  "NON-FICTION-AI-WEAVIATE": {
+   "name": "NON_FICTION_AI_WEAVIATE",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Нон-фикшн через ИИ + Weaviate (векторная БД)",
+   "func": "",
+   "lang": null,
+   "note": "26.01.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/NON_FICTION_AI_WEAVIATE",
+    "G:/AI/_MY_PROGRAMMING_4/NON-FICTION-AI-WEAVIATE"
+   ]
+  },
+  "TEST-PLAYWRIGHT": {
+   "name": "TEST_PLAYWRIGHT",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Тест Playwright",
+   "func": "",
+   "lang": "JavaScript",
+   "note": "29.01.2026, тест",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/TEST_PLAYWRIGHT"
+   ]
+  },
+  "TEST-CLOUDУ46-AGENTS": {
+   "name": "Test_Cloudу46_Agents",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Тест агентов (Cloud 46)",
+   "func": "",
+   "lang": null,
+   "note": "08.02.2026, тест",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/Test_Cloudу46_Agents"
+   ]
+  },
+  "VIDEO-TRANSLATOR": {
+   "name": "VIDEO_TRANSLATOR",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Переводчик видео (старый)",
+   "func": "",
+   "lang": "Python",
+   "note": "17.09.2025, 11 мес",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/VIDEO_TRANSLATOR"
+   ]
+  },
+  "AMAZON-NOTEBOOKS-AUTOMATION": {
+   "name": "amazon-notebooks-automation",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Автоматизация Amazon-ноутбуков",
+   "func": "",
+   "lang": "JavaScript",
+   "note": "26.01.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/amazon-notebooks-automation",
+    "G:/AI/_MY_PROGRAMMING_4/AMAZON-NOTEBOOKS-AUTOMATION"
+   ]
+  },
+  "KDP-FORM-AUTOMATION": {
+   "name": "kdp-form-automation",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Автоматизация KDP-форм",
+   "func": "",
+   "lang": "JavaScript",
+   "note": "09.02.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/kdp-form-automation",
+    "G:/AI/_MY_PROGRAMMING_4/KDP-FORM-AUTOMATION"
+   ]
+  },
+  "TEMP-BACKUP": {
+   "name": "_temp_backup",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Временный бэкап",
+   "func": "",
+   "lang": null,
+   "note": "служебная",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/_temp_backup"
+   ]
+  },
+  "НОВАЯ-ПАПКА-ШАБЛОН": {
+   "name": "Новая папка-Шаблон",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Шаблон нового проекта",
+   "func": "",
+   "lang": "Python",
+   "note": "22.08.2026, шаблон",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/Новая папка-Шаблон"
+   ]
+  },
+  "УСТАНОВКЕ-MPC-СЕРВЕРА-WINDSURF.": {
+   "name": "Установке_MPC_сервера_windSurf._",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Инструкция установки MPC-сервера Windsurf",
+   "func": "",
+   "lang": null,
+   "note": "20.01.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING/Установке_MPC_сервера_windSurf._"
+   ]
+  },
+  "CIVITAI-DOWNLOAD-IMAGES": {
+   "name": "CIVITAI-DOWNLOAD-IMAGES",
+   "repo": "CIVITAI-DOWNLOAD-IMAGES",
+   "status": "спящий",
+   "purpose": "Скачивание изображений с Civitai",
+   "func": "Парсер Civitai API, массовая загрузка — переиспользуемо для грабберов",
+   "lang": "Python",
+   "note": "GIT, 23.05.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/CIVITAI-DOWNLOAD-IMAGES"
+   ]
+  },
+  "COMFYUI-API-CHAT": {
+   "name": "COMFYUI-API-CHAT",
+   "repo": "COMFYUI-API-CHAT",
+   "status": "спящий",
+   "purpose": "Чат-интерфейс поверх ComfyUI API",
+   "func": "Обёртка ComfyUI API в чат — переиспользуемо для управления ComfyUI",
+   "lang": "JavaScript",
+   "note": "GIT, 13.04.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/COMFYUI-API-CHAT"
+   ]
+  },
+  "COMFYUI-FILE-MANAGER": {
+   "name": "COMFYUI-FILE-MANAGER",
+   "repo": "COMFYUI-FILE-MANAGER",
+   "status": "спящий",
+   "purpose": "Менеджер файлов/моделей ComfyUI",
+   "func": "Управление файлами моделей, лорами",
+   "lang": "JavaScript",
+   "note": "GIT, 13.04.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/COMFYUI-FILE-MANAGER"
+   ]
+  },
+  "COMFYUI-STORY-ILLUSTRATOR": {
+   "name": "COMFYUI-STORY-ILLUSTRATOR",
+   "repo": "COMFYUI-STORY-ILLUSTRATOR",
+   "status": "живой",
+   "purpose": "Иллюстрирование историй через ComfyUI (серия картинок к рассказу)",
+   "func": "Пайплайн «текст → серия согласованных иллюстраций» — переиспользуемо для story-иллюстраций",
+   "lang": "Python",
+   "note": "GIT, 10.07.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/COMFYUI-STORY-ILLUSTRATOR"
+   ]
+  },
+  "COMFYUI": {
+   "name": "ComfyUI",
+   "repo": "ComfyUI",
+   "status": "спящий",
+   "purpose": "Форк/копия ComfyUI (голый)",
+   "func": "",
+   "lang": "Python",
+   "note": "GIT, 10.04.2026 — замещён portable",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/ComfyUI"
+   ]
+  },
+  "VIDEO-CLAUDE-CHAT": {
+   "name": "VIDEO-CLAUDE-CHAT",
+   "repo": "VIDEO-CLAUDE-CHAT",
+   "status": "живой",
+   "purpose": "Чат с Claude о видео (анализ видео через LLM)",
+   "func": "Связка видео-фреймы → LLM-чат — переиспользуемо для видеоанализа",
+   "lang": "Python",
+   "note": "GIT, 16.06.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/VIDEO-CLAUDE-CHAT"
+   ]
+  },
+  "COMFYUI-UNIVERSAL": {
+   "name": "COMFYUI-UNIVERSAL",
+   "repo": null,
+   "status": "живой",
+   "purpose": "Универсальная конфигурация ComfyUI (общий каркас)",
+   "func": "config.yaml, планирование, логи — переиспользуемо как эталон ComfyUI-проекта",
+   "lang": null,
+   "note": "GIT (локальный), 19.07.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/COMFYUI-UNIVERSAL"
+   ]
+  },
+  "VIDEO-DETAILED-DESCRIPTION": {
+   "name": "VIDEO-DETAILED-DESCRIPTION",
+   "repo": null,
+   "status": "живой",
+   "purpose": "Детальное описание видео (claude-real-video): умное извлечение значимых кадров",
+   "func": "Детекция смены сцен, отбор значимых кадров, транскрибация — переиспользуемо для LLM-анализа видео",
+   "lang": "Python",
+   "note": "09.07.2026, PyPI claude-real-video",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/VIDEO-DETAILED-DESCRIPTION"
+   ]
+  },
+  "VIDEO-SCENE-DETECT": {
+   "name": "VIDEO-SCENE-DETECT",
+   "repo": null,
+   "status": "живой",
+   "purpose": "Детекция сцен в видео, ключевые кадры, нарезка, описание через vision",
+   "func": "PySceneDetect + FFmpeg + OpenRouter vision — переиспользуемо для видеоанализа",
+   "lang": "Python",
+   "note": "30.06.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/VIDEO-SCENE-DETECT"
+   ]
+  },
+  "BUSINESS-SALE-PAINTING": {
+   "name": "BUSINESS-SALE-PAINTING",
+   "repo": null,
+   "status": "живой",
+   "purpose": "Бизнес-проект: продажа картин через интернет (заметки/план)",
+   "func": "",
+   "lang": null,
+   "note": "05.08.2026, документы",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/BUSINESS-SALE-PAINTING"
+   ]
+  },
+  "COMFYUI-WAN2-2": {
+   "name": "COMFYUI-WAN2-2",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "ComfyUI + Wan2.2 (генерация видео)",
+   "func": "",
+   "lang": "Python",
+   "note": "20.05.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/COMFYUI-WAN2-2"
+   ]
+  },
+  "COMFYUI-PORTABLE": {
+   "name": "COMFYUI_PORTABLE",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Портативная сборка ComfyUI",
+   "func": "",
+   "lang": "Python",
+   "note": "26.04.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/COMFYUI_PORTABLE"
+   ]
+  },
+  "NEW-COMFYUI-WAN2": {
+   "name": "NEW-COMFYUI-WAN2",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Новая сборка ComfyUI + Wan2",
+   "func": "",
+   "lang": null,
+   "note": "16.04.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/NEW-COMFYUI-WAN2"
+   ]
+  },
+  "SOURCES-COMFYUI": {
+   "name": "SOURCES-COMFYUI",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Исходники ComfyUI (источник)",
+   "func": "",
+   "lang": null,
+   "note": "29.04.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/SOURCES-COMFYUI"
+   ]
+  },
+  "VERDENT-TEST": {
+   "name": "VERDENT-TEST",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Тест Verdent",
+   "func": "",
+   "lang": "JavaScript",
+   "note": "26.04.2026, тест",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_2/VERDENT-TEST"
+   ]
+  },
+  "VOICE-OVE-RECORDING": {
+   "name": "VOICE-OVE-RECORDING",
+   "repo": "VOICE-OVE-RECORDING",
+   "status": "спящий",
+   "purpose": "Озвучка художественного текста",
+   "func": "Пайплайн TTS для книг — переиспользуемо для аудиокниг",
+   "lang": "Python",
+   "note": "GIT, 28.04.2026",
+   "dirs": [
+    "F:/_MY_PROGRAMMING_3/VOICE-OVE-RECORDING"
+   ]
+  },
+  "VOICE-OVE-RECORDING-QWEEN3": {
+   "name": "VOICE-OVE-RECORDING-QWEEN3",
+   "repo": "VOICE-OVE-RECORDING-QWEEN3",
+   "status": "спящий",
+   "purpose": "Озвучка текста через Qwen3-TTS",
+   "func": "Qwen3-TTS интеграция — переиспользуемо для озвучки",
+   "lang": "HTML",
+   "note": "GIT, 29.04.2026",
+   "dirs": [
+    "F:/_MY_PROGRAMMING_3/VOICE-OVE-RECORDING-QWEEN3"
+   ]
+  },
+  "AGENT-TOOLS": {
+   "name": "_AGENT-TOOLS",
+   "repo": "_AGENT-TOOLS",
+   "status": "спящий",
+   "purpose": "Набор инструментов для ИИ-агентов",
+   "func": "Библиотека утилит для агентов — переиспользуемо",
+   "lang": "Python",
+   "note": "GIT, 29.04.2026",
+   "dirs": [
+    "F:/_MY_PROGRAMMING_3/_AGENT-TOOLS"
+   ]
+  },
+  "OBSIDIAN-KNOWLEDGE-BASE": {
+   "name": "OBSIDIAN-KNOWLEDGE-BASE",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "База знаний Obsidian (PRODUCTIVITY vault)",
+   "func": "Структура vault — переиспользуемо как эталон базы знаний",
+   "lang": null,
+   "note": "05.05.2026",
+   "dirs": [
+    "G:/AI",
+    "F:/_MY_PROGRAMMING_3/OBSIDIAN-KNOWLEDGE-BASE"
+   ]
+  },
+  "OPTIMIZING-COMPUTE-PERFORMANCE": {
+   "name": "OPTIMIZING-COMPUTE-PERFORMANCE",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Оптимизация вычислительной производительности",
+   "func": "",
+   "lang": null,
+   "note": "29.04.2026",
+   "dirs": [
+    "F:/_MY_PROGRAMMING_3/OPTIMIZING-COMPUTE-PERFORMANCE"
+   ]
+  },
+  "TOMATO-TIME": {
+   "name": "TOMATO-TIME",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Таймер Pomodoro (связан с TOMATO-2-TIMERS)",
+   "func": "",
+   "lang": null,
+   "note": "05.05.2026",
+   "dirs": [
+    "F:/_MY_PROGRAMMING_3/TOMATO-TIME"
+   ]
+  },
+  "AUTOMATION-LOWCONTENT-BOOK": {
+   "name": "AUTOMATION-LOWCONTENT-BOOK",
+   "repo": "AUTOMATION-LOWCONTENT-BOOK",
+   "status": "живой",
+   "purpose": "Автоматизация создания low-content книг (KDP)",
+   "func": "Генерация контента книг — переиспользуемо для KDP-автоматизации",
+   "lang": "Python",
+   "note": "GIT, 13.06.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_4/AUTOMATION-LOWCONTENT-BOOK"
+   ]
+  },
+  "GENERATOR-CLAUDE": {
+   "name": "GENERATOR-CLAUDE",
+   "repo": "GENERATOR_CLAUDE",
+   "status": "мёртвый",
+   "purpose": "Генератор (Claude) — старый",
+   "func": "",
+   "lang": "JavaScript",
+   "note": "GIT, 13.11.2025, 9 мес — мёртвый",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_4/GENERATOR-CLAUDE"
+   ]
+  },
+  "AUTOMATION-LOW-CONTENT-BOOK-2": {
+   "name": "AUTOMATION-LOW-CONTENT-BOOK-2",
+   "repo": null,
+   "status": "живой",
+   "purpose": "Автоматизация low-content книг v2 (дубль/продолжение)",
+   "func": "",
+   "lang": null,
+   "note": "04.06.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_4/AUTOMATION-LOW-CONTENT-BOOK-2"
+   ]
+  },
+  "DOE-CONTENT-AUTOMATION": {
+   "name": "DOE-CONTENT-AUTOMATION",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Автоматизация контента DOE",
+   "func": "",
+   "lang": "Python",
+   "note": "18.02.2026",
+   "dirs": [
+    "G:/AI/_MY_PROGRAMMING_4/DOE-CONTENT-AUTOMATION"
+   ]
+  },
+  "IVRIT-FILMS-WHISPER": {
+   "name": "IVRIT-FILMS-WHISPER",
+   "repo": "IVRIT-FILMS-WHISPER",
+   "status": "живой",
+   "purpose": "Транскрибация фильмов на иврите через Whisper",
+   "func": "Whisper-транскрибация + субтитры — переиспользуемо для транскрибации медиа",
+   "lang": "Python",
+   "note": "GIT, 02.07.2026",
+   "dirs": [
+    "F:/_MY_PROGRAMMING/IVRIT-FILMS-WHISPER"
+   ]
+  },
+  "MONTECARLOOPTIMIZATIONKIMI": {
+   "name": "MonteCarloOptimizationKimi",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Оптимизация Monte Carlo моделирования биосенсора через Kimi K2.5 Agent Swarm",
+   "func": "Мультипроцессная оптимизация параметров (Agent Swarm), ускорение 3-4x — переиспользуемо для параллельных вычислений",
+   "lang": "Python",
+   "note": "03.02.2026, научный демо",
+   "dirs": [
+    "G:/AI"
+   ]
+  },
+  "TOMATO-2-TIMERS": {
+   "name": "TOMATO-2-TIMERS",
+   "repo": "TOMATO-2-TIMERS",
+   "status": "живой",
+   "purpose": "Таймер Pomodoro (2 таймера), настройка Claude-агентов",
+   "func": "Pomodoro-логика + AGENTS.md/CLAUDE.md — переиспользуемо как шаблон агентской настройки",
+   "lang": "JavaScript",
+   "note": "GIT, 19.06.2026",
+   "dirs": [
+    "G:/AI"
+   ]
+  },
+  "COMFYUI-SYNCHRONIZATION": {
+   "name": "COMFYUI-SYNCHRONIZATION",
+   "repo": "COMFYUI-SYNCHRONIZATION",
+   "status": "спящий",
+   "purpose": "Синхронизация ComfyUI (модели, лоры) между машинами через GitHub",
+   "func": "Манифесты моделей, launchers, lora-index — переиспользуемо для синхронизации окружений",
+   "lang": "Python",
+   "note": "GIT, 26.05.2026",
+   "dirs": [
+    "G:/AI"
+   ]
+  },
+  "COMFYUI-SHARED": {
+   "name": "COMFYUI-SHARED",
+   "repo": null,
+   "status": "живой",
+   "purpose": "Общие модели/пути ComfyUI (models.yaml, extra_model_paths)",
+   "func": "extra_model_paths.yaml + MODELS.md — переиспользуемо для расшаривания моделей",
+   "lang": null,
+   "note": "GIT (локальный), 13.07.2026",
+   "dirs": [
+    "G:/AI"
+   ]
+  },
+  "MODEL-SORT": {
+   "name": "MODEL-SORT",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Сортировка/хранение моделей (ComfyUI_models, huggingface_cache)",
+   "func": "",
+   "lang": null,
+   "note": "инфраструктура моделей",
+   "dirs": [
+    "G:/AI"
+   ]
+  },
+  "MODELS-PROPERTY": {
+   "name": "MODELS-PROPERTY",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Документация по моделям (Vision, NSFW, карты моделей)",
+   "func": "",
+   "lang": null,
+   "note": "документы",
+   "dirs": [
+    "G:/AI"
+   ]
+  },
+  "PROJECTS": {
+   "name": "Projects",
+   "repo": null,
+   "status": "мёртвый",
+   "purpose": "Старые проекты 2024 (Automatic_Make, Business_Book, Business_Trading, Images_SD_API)",
+   "func": "",
+   "lang": null,
+   "note": "сентябрь 2024, архив",
+   "dirs": [
+    "G:/AI"
+   ]
+  },
+  "СOURSES": {
+   "name": "СOURSES",
+   "repo": null,
+   "status": "спящий",
+   "purpose": "Курсы (AI-Agents)",
+   "func": "",
+   "lang": null,
+   "note": "26.02.2026",
+   "dirs": [
+    "G:/AI"
+   ]
+  },
+  "ALL-CHAT-TO-DB": {
+   "name": "ALL-CHAT-TO-DB",
+   "repo": "ALL-CHAT-TO-DB",
+   "status": "живой",
+   "purpose": "Сбор и сохранение переписки чатов (Claude/агентов) в базу данных",
+   "func": "Экспорт диалогов → структурированная БД; переиспользуемо для логирования любых LLM-сессий",
+   "lang": "TeX",
+   "note": "last push 23.08.2026",
+   "dirs": []
+  },
+  "CIVITAI-IMAGE-GRABBER": {
+   "name": "CIVITAI-IMAGE-GRABBER",
+   "repo": "CIVITAI-IMAGE-GRABBER",
+   "status": "спящий",
+   "purpose": "Скачивание изображений с Civitai (ранняя версия, до CIVITAI-DOWNLOAD-IMAGES)",
+   "func": "Замещён CIVITAI-DOWNLOAD-IMAGES; парсер Civitai API",
+   "lang": "Python",
+   "note": "last push 10.04.2026",
+   "dirs": []
+  },
+  "COMFYUI-RUNPOD-COPY": {
+   "name": "COMFYUI-RUNPOD-COPY",
+   "repo": "COMFYUI-RUNPOD-COPY",
+   "status": "спящий",
+   "purpose": "Копирование/синхронизация ComfyUI между локальной машиной и RunPod",
+   "func": "Скрипты переноса файлов моделей между окружениями",
+   "lang": null,
+   "note": "last push 20.03.2026",
+   "dirs": []
+  },
+  "COMFYUI-SIVITAI-CHAT": {
+   "name": "COMFYUI-SIVITAI-CHAT",
+   "repo": "COMFYUI-SIVITAI-CHAT",
+   "status": "спящий",
+   "purpose": "Чат-интерфейс для ComfyUI + интеграция с Civitai",
+   "func": "Чат-обёртка над ComfyUI API",
+   "lang": null,
+   "note": "last push 01.04.2026",
+   "dirs": []
+  },
+  "COST-MODEL-TODAY": {
+   "name": "COST-MODEL-TODAY",
+   "repo": "COST-MODEL-TODAY",
+   "status": "живой",
+   "purpose": "Расчёт стоимости API-моделей (OpenRouter/Anthropic) на сегодня",
+   "func": "Калькулятор/трекер цен на модели — переиспользуемо для контроля бюджета API",
+   "lang": "Python",
+   "note": "last push 24.07.2026",
+   "dirs": []
+  },
+  "IMMERSIVE-LANGUAGE-API-IVRIT": {
+   "name": "IMMERSIVE-LANGUAGE-API-IVRIT",
+   "repo": "IMMERSIVE-LANGUAGE-API-IVRIT",
+   "status": "живой",
+   "purpose": "API для иммерсивного изучения иврита (языковая платформа)",
+   "func": "Бэкенд-API языкового обучения; методы повторения/карточек",
+   "lang": "JavaScript",
+   "note": "last push 29.06.2026",
+   "dirs": []
+  },
+  "IVRIT-MEDIA-PLAYER": {
+   "name": "IVRIT-MEDIA-PLAYER",
+   "repo": "IVRIT-MEDIA-PLAYER",
+   "status": "живой",
+   "purpose": "Медиаплеер для изучения иврита (фильмы/аудио с субтитрами)",
+   "func": "Плеер с субтитрами и переводом; переиспользуемо для языковых проектов",
+   "lang": null,
+   "note": "last push 19.06.2026",
+   "dirs": []
+  },
+  "VOICE-OVE-RECORDING-QWEEN3-INSTRUCT": {
+   "name": "VOICE-OVE-RECORDING-QWEEN3-INSTRUCT",
+   "repo": "VOICE-OVE-RECORDING-QWEEN3-INSTRUCT",
+   "status": "спящий",
+   "purpose": "Озвучка текста через Qwen3 (instruct-версия пайплайна)",
+   "func": "Пайплайн озвучки; инстркции для модели",
+   "lang": "Python",
+   "note": "last push 02.05.2026",
+   "dirs": []
+  },
+  "PYTHONPROJEKT000": {
+   "name": "pythonProjekt000",
+   "repo": "pythonProjekt000",
+   "status": "мёртвый",
+   "purpose": "(заглушка/пробный репо)",
+   "func": "",
+   "lang": null,
+   "note": "last push 01.06.2024, 27 мес назад — тест",
+   "dirs": []
+  },
+  "BOAZ-MATHS-WORKBOOK": {
+   "name": "Boaz-Maths-Workbook",
+   "repo": "Boaz-Maths-Workbook",
+   "status": "мёртвый",
+   "purpose": "Тренажёр умножения/деления (дубликат BOAZ_MATH_WORKBOOK)",
+   "func": "",
+   "lang": null,
+   "note": "дубликат активного BOAZ_MATH_WORKBOOK",
+   "dirs": []
+  }
+ }
+}
