@@ -3,12 +3,51 @@
 Журнал изменений архива скиллов. Пишется человеческим языком, чтобы перед
 push в GitHub не гадать, что переписано, переименовано или добавлено.
 
-**Правило синхронизации:** единственная правда — рабочая директория Hermes
-(`C:\Users\Yuri\AppData\Local\hermes\skills\`). Эта папка (`HERMES-AGENT-SKILL-ARCHIVE`)
-— её зеркало, отсюда идёт push в https://github.com/Yuri-Sverdlov/HERMES-AGENT-SKILL-ARCHIVE
-- Имя скилла совпадает → в архив кладётся самая свежая версия из Hermes.
-- Имя изменилось → сопоставляем по смыслу, решаем какой новее, новый заменяет старый.
-- На GitHub попадают только самые свежие версии, устаревшие удаляются.
+**Правило синхронизации (с 2026-10-29):** единственная правда — этот репозиторий.
+Он подключён к Hermes на каждом ПК через `skills.create_dir`, скиллы создаются и
+правятся прямо в нём; синхронизация — `git pull` / `git push`. См. `SYNC-LOGIC.md`.
+
+---
+
+## 2026-10-29 — ПК1: репо становится живой папкой скиллов, +18 личных скиллов
+
+**Контекст:** репозиторий переведён в приватный; клон на всех ПК по пути
+`E:\_MY-PROGRAMMING\HERMES-AGENT-SKILL-ARCHIVE`; Hermes подключается к нему через
+`skills.create_dir` вместо ручного копирования (все 4 старые копии архива на ПК1
+оказались старее живых скиллов).
+
+Структура: `skills/<имя>/` → `skills/<категория>/<имя>/` (как в Hermes).
+
+Удалены:
+- `Чат WhatsApp … .txt/.zip`, `YouTube_ссылки_….docx`, `app.py` — личные
+  артефакты, не скиллы (в истории первых коммитов остаются).
+- `robocopy-migration-skill.md` — старая отдельная копия, есть скилл `robocopy-migration`.
+- `computer-use` — встроенный скилл Hermes, обновляется самим Hermes.
+
+Обновлены (находки ПК1 из старых `multithread-downloader` / `video-extraction`,
+сделанные после миграции 17.09, влиты в новые имена):
+- `video-source-resolve` — раздел HDrezka/rezka.ag (Anubis PoW, voidboost CDN),
+  скрипты `rezka_fetch.py` / `rezka_parse.py`, полный разбор в
+  `references/rezka-anubis.md`.
+- `video-fetch` — aria2c через winget/PATH или `.hermes\aria2c.exe`, yt-dlp +
+  aria2c downloader, докачка `.aria2`; грабли: иллюзия размера sparse-файла aria2c,
+  размер в выводе yt-dlp ≠ итоговый файл, общий лимит на IP при параллельных
+  загрузках, проверка места на диске, YouTube через `player_client=android`.
+- `video-*` — жёсткие пути `C:/Users/Yuri/AppData/Local/hermes/skills/...` заменены
+  на `${HERMES_SKILL_DIR}` (иначе ломаются при подключении из репо).
+- `overview-projects-on-computer` — `projects.json` с ПК1 (top_folder
+  `G:/_MY-PROGRAMMING_1`; версия с ПК2 `G:/AI` — в истории git).
+
+Добавлены (личные скиллы ПК1, которых не было ни в одном архиве):
+- `autonomous-ai-agents/`: `hermes-skills-cross-pc-sync`, `personal-hermes-guide`
+- `email/`: `mail-aliexpress`, `mail-export`, `mail-inbox`, `mail-translate`
+- `idea-workflow/`: `idea-superpowers-suite`, `idea-to-design-doc`,
+  `idea-to-implementation-doc`, `idea-to-ui-design-brief`
+- `productivity/`: `book-translate-and-voice`, `cost-model-today`,
+  `image-ocr-to-docx`, `ocr-and-documents`, `save-to-google-drive`
+- `software-development/`: `coder-terminal-workflow`, `plan`, `robocopy-migration`
+
+**Итог:** 25 скиллов.
 
 ---
 
