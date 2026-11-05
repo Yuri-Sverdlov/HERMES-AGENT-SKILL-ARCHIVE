@@ -24,13 +24,24 @@ calibre pipelines) **render perfectly but extract as substituted characters**:
 `writing`→`writinN`, `cover`→`coPer`, `find`→`8nd`, `-`→`(`, `:`→`R`, `s`→`E`.
 MuPDF and poppler return the same garbage, the visual layer is fine — so the text is
 recoverable deterministically, no pixels need to be recognised.
-Worked example with all measurements: see the task brief the user keeps next to the books
-(`TASK-cmap-repair.md`) and the scripts in `%LOCALAPPDATA%\hermes\audio-work\`.
+
+## Scripts (in this skill)
+Work dir: `$BOOK_WORK_DIR`, default `%LOCALAPPDATA%\hermes\audio-work` — it must hold
+`fonts/` (original variable fonts from Google Fonts: `CrimsonPro-var.ttf`,
+`CrimsonPro-Italic-var.ttf`, `EBGaramond-var.ttf`, `NotoSans-var.ttf`) and `words_alpha.txt`.
+Run with a venv that has `pymupdf fonttools` and a sanitised env (no inherited `PYTHONPATH`).
+
+```
+python "${HERMES_SKILL_DIR}/scripts/score_text_layer.py" book.pdf [first last]   # diagnose: % dictionary words
+python "${HERMES_SKILL_DIR}/scripts/fix_tounicode.py" book.pdf book_fixed.pdf     # Method A, rewrites /ToUnicode
+```
+Reference run: 324-page book → `143 fonts patched, 6056 glyphs mapped`, 77.9 % → 86.4 %
+dictionary words on pages 9–60. Method B (raster matching below) is not scripted yet.
 
 ## Diagnose first (5 minutes, decides everything)
 1. `chars = len(page.get_text())`, `page.get_images()` per page — empty text means a scan, stop here and OCR.
 2. Ratio of alphabet tokens present in an English wordlist (`words_alpha.txt` from dwyl/english-words).
-   A clean text layer scores 99 %+; a broken one 0–60 %.
+   A clean text layer scores 99 %+; a broken one 0–80 % (`scripts/score_text_layer.py`).
 3. Count control characters (`ord(c) < 32`) and look for tell-tale substitutions.
 4. Dump the fonts: `page.get_fonts(full=True)` then `doc.extract_font(xref)`.
    - `/Type0` + `/CIDFontType2` + `/Identity-H` is the usual shape.
