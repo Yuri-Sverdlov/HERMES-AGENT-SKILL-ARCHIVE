@@ -26,6 +26,24 @@ metadata:
 5. Translate (see the OpenRouter section below), then post-edit, and only after that render audio.
 6. Synthesize each chunk, encode to 44.1 kHz stereo 192 kbps, concat by **re-encoding**, write an index with timecodes, and verify.
 
+## Scripts (in this skill) — one per pipeline step
+Work dir `$BOOK_WORK_DIR` (default `%LOCALAPPDATA%\hermes\audio-work`); a book lives in
+`$BOOK_WORK_DIR/en/<Book Key>/` (`chunks_en/`, `chunks_ru/`). Audio goes to `$BOOK_OUT_DIR`
+(default `$BOOK_WORK_DIR/out`). The OpenRouter key is read from `OPENROUTER_API_KEY` or the
+Hermes `.env`. Always launch with a sanitised env (no `PYTHONPATH`, see Pitfalls).
+
+| Step | Command | venv |
+|---|---|---|
+| OCR a scan (skip if the text layer is good) | `python "${HERMES_SKILL_DIR}/scripts/run_ocr.py" book.pdf` → `book.ocr.json` | `pymupdf rapidocr-onnxruntime` |
+| Clean + chunk the OCR output | `python "${HERMES_SKILL_DIR}/scripts/clean_ocr.py" book.ocr.json "<Book Key>"` (edit `HEADS` per book) | stdlib |
+| Clean + chunk a PDF with a good text layer | `python "${HERMES_SKILL_DIR}/scripts/clean_pdf.py" book.pdf "<Book Key>"` | `pymupdf` |
+| Translate EN → RU | `python "${HERMES_SKILL_DIR}/scripts/translate.py" "<Book Key>"` | stdlib |
+| Post-edit leftover English | `python "${HERMES_SKILL_DIR}/scripts/repair.py" "<Book Key>"` | stdlib |
+| Voice (Silero) + combined mp3 + index | `python "${HERMES_SKILL_DIR}/scripts/synth_book.py" "<Book Key>"` | `sileroenv` (torch, soundfile, numpy) + ffmpeg |
+
+All steps resume: re-running skips finished chunks/sections. The glossary inside `translate.py`
+and the allow-list of Latin names in `repair.py` are book-specific — edit them per book.
+
 ## Choosing the engine (decide before the first render)
 Swapping the voice after the fact re-renders the whole book, so the engine is picked once — before the first render,
 and only once the text is frozen. Default stays Silero (offline, ~30× faster than the quality models).
