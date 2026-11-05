@@ -40,7 +40,7 @@ skills:
 | `email` | `mail-aliexpress`, `mail-export`, `mail-inbox`, `mail-translate` |
 | `idea-workflow` | `idea-superpowers-suite`, `idea-to-design-doc`, `idea-to-implementation-doc`, `idea-to-ui-design-brief` |
 | `media` | `video-source-resolve` → `video-fetch` → `video-batch-runner`; `video-compression` |
-| `productivity` | `book-translate-and-voice`, `cost-model-today`, `image-ocr-to-docx`, `ocr-and-documents`, `overview-projects-on-computer`, `save-to-google-drive`, `screenshot-to-docx`, `whatsapp-yt-links` |
+| `productivity` | `book-translate-and-voice`, `cost-model-today`, `image-ocr-to-docx`, `ocr-and-documents`, `overview-projects-on-computer`, `pdf-broken-text-layer-repair`, `project-knowledge-guides`, `save-to-google-drive`, `screenshot-to-docx`, `whatsapp-yt-links` |
 | `software-development` | `coder-terminal-workflow`, `plan`, `robocopy-migration` |
 
 `home-accounting` живёт в своём репо `HERMES-ALL-IN-ONE` и подключается через
