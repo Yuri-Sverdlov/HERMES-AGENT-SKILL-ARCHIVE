@@ -35,4 +35,4 @@ In git-bash (MSYS2):
 
 ## Check also
 
-For cross-PC sync and the git side of junction setup, see `hermes-cross-pc-git-sync` skill.
+For cross-PC sync and the git side of junction setup, see `hermes-skills-cross-pc-sync (приложение references/hermes-cross-pc-git-sync.md)` skill.

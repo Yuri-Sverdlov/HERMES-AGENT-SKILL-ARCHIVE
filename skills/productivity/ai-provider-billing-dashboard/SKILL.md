@@ -8,7 +8,7 @@ platforms: [linux, macos, windows]
 metadata:
   hermes:
     tags: [billing, balance, openrouter, anthropic, dashboard, cost-tracking, api]
-    related_skills: [hermes-model-switching]
+    related_skills: [personal-hermes-guide (приложение references/hermes-model-switching.md)]
 ---
 
 # AI Provider Billing / Balance Dashboard

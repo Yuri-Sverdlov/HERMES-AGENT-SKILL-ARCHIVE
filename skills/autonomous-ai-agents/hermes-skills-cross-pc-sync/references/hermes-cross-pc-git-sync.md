@@ -1,15 +1,6 @@
----
-name: hermes-cross-pc-git-sync
-description: "Sync the user's Hermes work-files (personal guides, project code, configs) between his two Windows PCs via a single private GitHub repo. Covers: making the repo private before first push, secret-scan-before-commit discipline, monorepo layout (projects/ + guides/), and the Windows symlink-vs-junction constraint for keeping files in their home location while git-tracking them. Reach for this whenever the user wants something to 'follow him' / 'sync' / 'be on both computers'."
-version: 1.0.0
-author: agent
-license: MIT
-platforms: [windows]
-metadata:
-  hermes:
-    tags: [hermes, git, github, sync, two-pc, windows, junction, symlink]
-    related_skills: [personal-hermes-guide, hermes-profiles-and-sessions, github-repo-management]
----
+# hermes-cross-pc-git-sync (перенесено из отдельного скилла)
+
+> Перенесено hermes-cross-pc-git-sync → hermes-skills-cross-pc-sync. Бывший отдельный скилл, вычищенный curator'ом; содержание сохранено здесь целиком.
 
 # Cross-PC Hermes file sync via private GitHub repo
 

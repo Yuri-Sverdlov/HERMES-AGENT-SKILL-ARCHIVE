@@ -1,18 +1,6 @@
----
-name: project-inventory
-description: "Scan a projects directory, categorize items, and produce a structured .docx summary with name, description (goals+stack), and completion status."
-version: 1.0.0
-author: Hermes Agent
-license: MIT
-platforms: [windows]
-metadata:
-  hermes:
-    tags: [inventory, documentation, python-docx, project-management, summary]
-    related_skills: [codebase-inspection]
-prerequisites:
-  python:
-    packages: [python-docx]
----
+# project-inventory (перенесено из отдельного скилла)
+
+> Перенесено project-inventory → overview-projects-on-computer. Бывший отдельный скилл, вычищенный curator'ом; содержание сохранено здесь целиком.
 
 # Project Inventory — .docx Summary
 

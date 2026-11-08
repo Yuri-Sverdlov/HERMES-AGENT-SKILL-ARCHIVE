@@ -243,3 +243,9 @@ A killed aria2c resumes from its `.aria2` control file (`--continue=true`).
 - [ ] `scripts/verify_media.py` passes — not "the file exists"
 - [ ] Measured resolution/duration reported to the user
 - [ ] No `.part` or `.part-Frag*.part` leftovers in the output dir
+
+## Приложения, перенесённые из отдельных скиллов
+
+Эти скиллы раньше жили отдельно и были вычищены curator'ом; содержание перенесено сюда целиком, чтобы знание не терялось.
+
+- `references/youtube-download.md` — Batch-download YouTube videos, all Shorts from a channel, or full playlists via yt-dlp.

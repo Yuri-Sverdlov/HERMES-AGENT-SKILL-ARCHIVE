@@ -42,3 +42,17 @@ git push
 (`hermes curator restore <имя>`) или ставят командой `hermes skills install <id>`.
 Одинаковые имена скиллов в этом архиве и в локальном архиве профиля — норма: здесь рабочая
 копия для синхронизации, там служебная запись curator'а.
+
+## Что уже ушло из этого архива
+
+**Возвращены в работу** (перенесены в свои категории, помечены `pinned`):
+`user-style-yuri`, `email-processing`, `ai-provider-billing-dashboard`, `stt-whisper-gpu-windows`,
+`llm-knowledge-base`, `video-dubbing-pipeline`, `nsfw-scene-positioning`.
+
+**Влиты в существующие скиллы как приложения** (см. `references/` у цели):
+`hermes-cross-pc-git-sync` и `directory-reconciliation` → `hermes-skills-cross-pc-sync`;
+`youtube-download` → `video-fetch`; `project-inventory` → `overview-projects-on-computer`;
+`llm-chat-knowledge-base` → `llm-knowledge-base`; `hermes-model-switching` и
+`hermes-profiles-and-sessions` → `personal-hermes-guide`.
+
+История переносов — в git: `git log --oneline -- skills/.archive`.

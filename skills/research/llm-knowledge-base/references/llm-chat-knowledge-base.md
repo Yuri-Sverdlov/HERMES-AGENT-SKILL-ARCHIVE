@@ -1,9 +1,6 @@
----
-name: llm-chat-knowledge-base
-description: Export, organize, and search chat histories from LLM platforms (Hermes, GPT, Gemini, Grok, Perplexity, Claude) as a local markdown knowledge base with document-level and paragraph-level search.
-version: 1.0.0
-platforms: [linux, macos, windows]
----
+# llm-chat-knowledge-base (перенесено из отдельного скилла)
+
+> Перенесено llm-chat-knowledge-base → llm-knowledge-base. Бывший отдельный скилл, вычищенный curator'ом; содержание сохранено здесь целиком.
 
 # LLM Chat Knowledge Base
 

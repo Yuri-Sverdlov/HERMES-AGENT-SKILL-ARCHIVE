@@ -1,15 +1,6 @@
----
-name: hermes-model-switching
-description: "Diagnose and fix Hermes model/provider switching: /model flag syntax, provider slugs, 404s, pre-switch model verification."
-version: 1.0.0
-author: agent
-license: MIT
-platforms: [linux, macos, windows]
-metadata:
-  hermes:
-    tags: [hermes, model, provider, openrouter, switching, troubleshooting]
-    related_skills: [hermes-agent]
----
+# hermes-model-switching (перенесено из отдельного скилла)
+
+> Перенесено hermes-model-switching → personal-hermes-guide. Бывший отдельный скилл, вычищенный curator'ом; содержание сохранено здесь целиком.
 
 # Hermes Model & Provider Switching
 

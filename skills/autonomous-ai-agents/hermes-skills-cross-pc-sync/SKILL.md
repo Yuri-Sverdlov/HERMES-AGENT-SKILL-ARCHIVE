@@ -231,3 +231,13 @@ Curator вычищает скиллы по таймеру (14 дней без и
   абстрактно; в конце — рекомендация и один вопрос «приступаю?».
 - Ответы — по-русски; итог аудита таблицей «скилл / где свежее / что совпадает»,
   в конце 2–4 конкретных вопроса на решение (обычным текстом, не через clarify).
+
+## Приложения, перенесённые из отдельных скиллов
+
+Эти скиллы раньше жили отдельно и были вычищены curator'ом; содержание перенесено сюда целиком, чтобы знание не терялось.
+
+- `references/hermes-cross-pc-git-sync.md` — Sync the user's Hermes work-files (personal guides, project code, configs) between his two Windows PCs via a single private GitHub repo. Covers: making the repo private before first push, secret-scan-
+  - `references\hermes-cross-pc-git-sync--billing-dashboard-secret-scan.md`
+  - `scripts\make-guides-junction.sh`
+- `references/directory-reconciliation.md` — Compare two directory trees for content differences, arbitrate version conflicts where timestamps are unreliable (cloud-sync, copies, downloads), and merge the best version of each file into a canonic
+  - `references\directory-reconciliation--skill-archive-reconciliation-trace.md`

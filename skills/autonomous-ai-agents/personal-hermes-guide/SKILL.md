@@ -174,3 +174,14 @@ wrote it WITHOUT a BOM → Notepad rendered mojibake like `Ð¢ÐµÐºÑ`):
   как требует задача. Если находки есть — перечисли их с маршрутизацией
   (файл 1 журнал/грабли, файл 2 команды/глоссарий) и **спроси разрешения** перед
   записью.
+
+## Приложения, перенесённые из отдельных скиллов
+
+Эти скиллы раньше жили отдельно и были вычищены curator'ом; содержание перенесено сюда целиком, чтобы знание не терялось.
+
+- `references/hermes-model-switching.md` — Diagnose and fix Hermes model/provider switching: /model flag syntax, provider slugs, 404s, pre-switch model verification.
+  - `references\hermes-model-switching--model-cost-quality.md`
+  - `scripts\clean_model_command.py`
+- `references/hermes-profiles-and-sessions.md` — Organize work in Hermes like projects: profiles as isolated workspaces, session naming with prefixes, switching with the -p flag, creating empty session stubs, and attaching a project's own skill via 
+  - `references\hermes-profiles-and-sessions--project-local-skills.md`
+  - `references\hermes-profiles-and-sessions--session-stubs.md`

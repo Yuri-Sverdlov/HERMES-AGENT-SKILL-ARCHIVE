@@ -250,3 +250,11 @@ Use `python-docx` (available in Yuri's env, version 1.2.0). Document structure:
 - `references/archive-workflow.md` — SQL queries for 3-axis session classification and .docx build instructions
 - `references/compile-architecture.md` — compile.py layered guards, hash logic, page validation, and selftest patterns (TASK-021)
 - Google Drive sync via `google-workspace` skill
+
+## Приложения, перенесённые из отдельных скиллов
+
+Эти скиллы раньше жили отдельно и были вычищены curator'ом; содержание перенесено сюда целиком, чтобы знание не терялось.
+
+- `references/llm-chat-knowledge-base.md` — Export, organize, and search chat histories from LLM platforms (Hermes, GPT, Gemini, Grok, Perplexity, Claude) as a local markdown knowledge base with document-level and paragraph-level search.
+  - `scripts\export_hermes.py`
+  - `scripts\search_kb.py`

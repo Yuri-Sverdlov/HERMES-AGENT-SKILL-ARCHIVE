@@ -1,15 +1,6 @@
----
-name: hermes-profiles-and-sessions
-description: "Organize work in Hermes like projects: profiles as isolated workspaces, session naming with prefixes, switching with the -p flag, creating empty session stubs, and attaching a project's own skill via skills.external_dirs. Covers the profile-vs-session two-level model and the state.db layout."
-version: 1.0.0
-author: agent
-license: MIT
-platforms: [linux, macos, windows]
-metadata:
-  hermes:
-    tags: [hermes, profiles, sessions, organization, projects, state-db]
-    related_skills: [hermes-agent, personal-hermes-guide]
----
+# hermes-profiles-and-sessions (перенесено из отдельного скилла)
+
+> Перенесено hermes-profiles-and-sessions → personal-hermes-guide. Бывший отдельный скилл, вычищенный curator'ом; содержание сохранено здесь целиком.
 
 # Hermes Profiles & Session Organization ("projects")
 

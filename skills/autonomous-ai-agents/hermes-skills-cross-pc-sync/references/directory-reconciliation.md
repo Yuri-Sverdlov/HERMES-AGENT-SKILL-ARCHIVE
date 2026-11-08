@@ -1,12 +1,6 @@
----
-name: directory-reconciliation
-description: Compare two directory trees for content differences, arbitrate version conflicts where timestamps are unreliable (cloud-sync, copies, downloads), and merge the best version of each file into a canonical output directory.
-version: 1.0.0
-metadata:
-  hermes:
-    tags: [directory, comparison, merge, sync, hash, audit]
-    related_skills: [robocopy-migration]
----
+# directory-reconciliation (перенесено из отдельного скилла)
+
+> Перенесено directory-reconciliation → hermes-skills-cross-pc-sync. Бывший отдельный скилл, вычищенный curator'ом; содержание сохранено здесь целиком.
 
 # Directory Reconciliation
 

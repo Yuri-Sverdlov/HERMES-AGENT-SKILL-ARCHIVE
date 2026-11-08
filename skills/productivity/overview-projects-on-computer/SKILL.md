@@ -79,3 +79,10 @@ projects.json:
 1. **Запуск через системный Python** (`C:/Python311/python`), не venv Hermes — иначе нет `python-docx`.
 2. **Путь с пробелами** — оборачивай в кавычки.
 3. **Перенос на другой компьютер** — верхняя папка другая (например `D:\AI`); просто передай её в скрипт, JSON обновится под новую машину.
+
+## Приложения, перенесённые из отдельных скиллов
+
+Эти скиллы раньше жили отдельно и были вычищены curator'ом; содержание перенесено сюда целиком, чтобы знание не терялось.
+
+- `references/project-inventory.md` — Scan a projects directory, categorize items, and produce a structured .docx summary with name, description (goals+stack), and completion status.
+  - `references\project-inventory--project-summary-example.md`

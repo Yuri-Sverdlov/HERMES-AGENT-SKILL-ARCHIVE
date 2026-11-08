@@ -135,7 +135,7 @@ After every long response, self-check:
 
 - `references/stop-conditions.md` — exhaustive list of when to STOP and ask before proceeding
 - `personal-hermes-guide` — Yuri's own notes on working with Hermes (lives in same category)
-- `hermes-cross-pc-git-sync` — cross-PC workflow conventions
+- `hermes-skills-cross-pc-sync` — синхронизация между ПК (сюда же перенесён бывший скилл `hermes-cross-pc-git-sync`)
 
 ## Session-specific origin
 

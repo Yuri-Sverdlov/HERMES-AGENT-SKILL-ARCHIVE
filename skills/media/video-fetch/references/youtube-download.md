@@ -1,8 +1,6 @@
----
-name: youtube-download
-description: Batch-download YouTube videos, all Shorts from a channel, or full playlists via yt-dlp.
-platforms: [windows, linux, macos]
----
+# youtube-download (перенесено из отдельного скилла)
+
+> Перенесено youtube-download → video-fetch. Бывший отдельный скилл, вычищенный curator'ом; содержание сохранено здесь целиком.
 
 # YouTube Download (yt-dlp)
 
