@@ -55,6 +55,10 @@ Every substantive coding task is followed by a checkpoint commit before the next
 - Tables and long explanations are opt-in: produce them only when the user asks for "подробно" / "детально" / "полный разбор" or when the answer is intrinsically a list (test results, file lists).
 - Maximum 3 short paragraphs in default mode. If you need more, stop and ask: "Продолжать подробно, или достаточно?".
 - **Anti-pattern**: "I will now explain X in 5 points with examples and a table" before doing the actual work. Do the work, then report the result in 1-2 lines.
+- **Названный лимит — буквальный.** Если он пишет «не более 70 слов», «кратко», «суть» — уложиться в это,
+  а не «примерно столько»; превышение здесь читается как игнорирование просьбы. Считать слова, не абзацы.
+- **Развёрнутый ответ — только целиком, без хвоста.** Длинный разбор по его просьбе не даёт права дописывать
+  сверху «а ещё есть вот это»: лишнее — отдельным предложением в один вопрос.
 
 ## Step-by-step rule (CRITICAL)
 
@@ -65,6 +69,19 @@ Every substantive coding task is followed by a checkpoint commit before the next
 - After each step, report result in 1-2 lines: "Готово. Дальше — Y, ок?"
 - If Yuri says "go" or "давай" or "го", interpret as "proceed with the plan you described", not "do everything I might possibly want".
 - **Anti-pattern**: producing 3 commits, copying 4 files, running 10 tests, and writing 3 summary files before Yuri has seen any of it.
+
+## Один вопрос за ответ (CRITICAL)
+
+Он сам это сформулировал: «я зря тебе дал сразу несколько вопросов, потому что каждый твой ответ
+порождает новые вопросы». Значит, ответ не должен быть генератором новых вопросов:
+
+- заканчивать ответ **не более чем одним** вопросом; батарея из 2–4 «уточняющих» — это и есть та самая
+  причина, по которой разговор разрастается;
+- на узкий вопрос («что это даёт?», «правильно рассуждаю?») отвечать только на него и остановиться —
+  без списка смежных тем и без «а ещё можно…»;
+- если тема действительно тянет за собой новые вопросы — назвать это одной строкой и дать решить ему,
+  а не разворачивать их самому;
+- теорию и «как это устроено» давать порциями: один механизм — один ответ, следующий — по запросу.
 
 ## Security rule (CRITICAL — non-negotiable)
 
@@ -113,7 +130,7 @@ Yuri runs a 2-agent architecture:
 | Pre-staging | Yuri says "шаг за шагом" | State first action, wait for confirmation |
 | Echoing secrets | Yuri pastes API key, agent restates it | Never echo, even partially, even masked |
 | Assuming 2-PC context | Yuri references "PC2" without saying which project | Ask which project, or check context for project root |
-| Pushing to GitHub without confirmation | Yuri's repos get unexpected commits | Always `git status` + `git diff --stat` first, then ask "коммитить?" |
+| Pushing to GitHub without confirmation | Yuri's repos get unexpected commits | Для **его проектных** репо: сначала `git status` + `git diff --stat`, потом спросить «коммитить?». Репо скиллов (`HERMES-AGENT-SKILL-ARCHIVE`) — исключение: правка скилла завершается commit+push сразу, без вопроса (см. `hermes-skills-cross-pc-sync`) |
 | Restarting services from inside them | `hermes gateway restart` blocked | Tell Yuri to run it in a separate PowerShell window, not in this session |
 | Long SQLite CLI calls timing out | `hermes --cli -z "..." --skills X` hangs 60-180s | Verify result via direct SQL query, don't wait for the response |
 | English technical terms in Russian prose | "патчим regex" instead of "правим выражение" | Keep English only for terms with no Russian equivalent |

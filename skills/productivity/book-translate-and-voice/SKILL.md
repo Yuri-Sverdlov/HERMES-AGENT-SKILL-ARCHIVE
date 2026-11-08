@@ -82,6 +82,30 @@ can name a card the machine does not have.
 Order of improvement: text normalisation → stress marks → Silero v5 → Piper/XTTS/F5 — never re-render audio before the text is frozen.
 Never swap engines without rendering the same section on both and letting the user's ear decide.
 
+## OCR скриншот-книг на русском: Tesseract, а не RapidOCR
+`scripts/run_ocr.py` (RapidOCR) годится для английского, но для кириллицы **не подходит**: его дефолтные
+модели китайско-английские и отдают латинские двойники — «Чувственное зеркало» превращается в
+«YyBCTBeHHOe 3epKanlo», и это потом надо расшифровывать вручную. Для русских скриншотов — Tesseract:
+`scripts/ocr_scan_ru.py` (страницы в текст) → `scripts/build_scan_book.py` (сборка книги и блоков).
+- Tesseract 5.4 стоит в `C:\Program Files\Tesseract-OCR\tesseract.exe` (в PATH его нет) и приходит
+  только с `eng`+`osd`. `rus.traineddata` из `tessdata_best` кладётся в **свою** папку (например
+  `<work>/tessdata`) и подключается через `--tessdata-dir` — тогда не нужны права на Program Files.
+- С кастомным `--tessdata-dir` нет конфига `tsv` (`read_params_file: Can't open tsv`): машиночитаемый
+  вывод запрашивается флагом `-c tessedit_create_tsv=1`, а не именем конфига.
+- 300 dpi, `--psm 3`. В TSV текст и уверенность лежат на `level=5` (слова) — строки собирать по
+  `block_num/par_num/line_num` самому, строки `level=4` пустые.
+
+### Пометка «пропуск строки» в разрезанном скриншоте
+Владелец требует пометку в ЛЮБОМ месте, где строка не распозналась, и ОДНУ на серию подряд. Условия:
+уверенность < 60, доля кириллицы < 0.5 (мусор), либо высота строки < 0.55 от медианной (обрезана краем).
+- **Не использовать эвристику по вертикальным разрывам**: межабзацный отступ выглядит как пропуск, и
+  правило «разрыв > 1.7×медианы» дало 190 ложных пометок на книге из 29 страниц вместо 22 настоящих.
+- Границы абзацев — по **ширине строки** (строка, не дошедшая до правого края = конец абзаца) плюс
+  пунктуация; по длине текста вся страница склеивается в один абзац.
+- Реклама отсекается геометрией (`left > 1000 px` при 300 dpi) плюс шаблонами (`РЕКЛАМА`, `@`, `24/7`,
+  `Телеграм`), но последние 2–3 страницы надо смотреть глазами: интерфейс приложения («ВРОАТЕ»,
+  «Далее > К описанию») стоит в колонке текста и проходит все фильтры.
+
 ## Throughput (measured: i5-12400F CPU, torch 2.15.0+cpu, Silero aidar)
 530–580 source chars/s → ~24 min of audio per minute of synthesis; 10 min of wall time ≈ 235 000 chars ≈ 4.4 h of audio. ffmpeg adds ~11 s per section. Planning rule: ~1 min of work per 100 000 chars, ~12 s per section end-to-end.
 

@@ -24,6 +24,7 @@ Referer/tokens that raw curl/aria2c cannot.
 | pbembed.me | `smart_dl.py` (HTTP Range) | server caps ~800 KB/s per IP — threads don't help |
 | strip2.in | resolve → `fp.spac.me` mp4 | ~280 KB/s single-thread; multi-thread unproven |
 | Yandex Video | not a host — resolve the pointer first | see `video-source-resolve` |
+| redgifs.com | JSON API: temp token → `/v2/users/<u>/search` → `media.redgifs.com/<Slug>.mp4` into aria2c | hd URL is permanent and unsigned; no Referer, no login. See section below |
 | erome.com | `yt-dlp -g` then check Range | album pages carry many items |
 | ok.ru | `yt-dlp "<page-url>"` | usually works unmodified |
 
@@ -100,6 +101,35 @@ Generic extractor; the page embeds a signed mp4 from
 Full treatment in SKILL.md (DASH, format selection, SABR ladder, 2-job
 concurrency cap). The one-line summary: **update yt-dlp, never use `-N`, request
 `bestvideo…+bestaudio` explicitly.**
+
+### redgifs.com
+Creator/profile pages are a **JSON API, not HTML to scrape**. Anonymous temp
+token, no account needed:
+
+```bash
+UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+TOK=$(curl -s -H "User-Agent: $UA" https://api.redgifs.com/v2/auth/temporary \
+      | python -c "import sys,json;print(json.load(sys.stdin)['token'])")
+curl -s -H "Authorization: Bearer $TOK" -H "User-Agent: $UA" \
+  "https://api.redgifs.com/v2/users/<name>/search?order=recent&count=100&page=1"
+```
+
+Response: `{gifs:[...], total, pages}` (paginate while `page < pages`). Each gif
+carries `id`, `duration` (seconds, float), `width`/`height`, `fileSize` (often 0 —
+ignore it), and `urls.{hd,sd,silent,poster,thumbnail}`.
+
+- `urls.hd` is `https://media.redgifs.com/<Slug>.mp4` — **permanent, unsigned,
+  no auth, no Referer required.** Unlike pornhub/eporner, feed it straight to
+  aria2c. `<Slug>` is the TitleCase form of the gif id.
+- aria2c input-file batch (`url` + `  out=<id>.mp4` lines, LF endings), 3 jobs ×
+  8 conns, `--header="Referer: https://www.redgifs.com/"` as harmless insurance.
+- Measured on this box: **21 clips (45–60 s, 1080x1926), 676 MB, ~3 min at
+  8–11 MiB/s aggregate.**
+- `duration` from the API makes a "short clips only" filter a JSON test — no
+  ffprobe round-trip, no per-file yt-dlp probe.
+- yt-dlp also has a RedGifs extractor (`redgifs.com/watch/<id>` page URL) — use
+  it for a single file; use the API for a whole creator.
+- Output dir convention on this box: `G:\_DOWNLOADS\redgifs-<user>`.
 
 ### Yandex Video
 **Not a host.** `yandex.ru/video/preview/<ID>` is a pointer whose HTML names the
