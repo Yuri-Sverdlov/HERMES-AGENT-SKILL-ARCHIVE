@@ -38,12 +38,19 @@ skills:
 
 | Категория | Скиллы |
 |---|---|
-| `autonomous-ai-agents` | `hermes-skills-cross-pc-sync`, `personal-hermes-guide` |
-| `email` | `mail-aliexpress`, `mail-export`, `mail-inbox`, `mail-translate` |
+| `autonomous-ai-agents` | `hermes-skills-cross-pc-sync`, `personal-hermes-guide`, `user-style-yuri` |
+| `creative` | `nsfw-scene-positioning` |
+| `email` | `email-processing`, `mail-aliexpress`, `mail-export`, `mail-inbox`, `mail-translate` |
 | `idea-workflow` | `idea-superpowers-suite`, `idea-to-design-doc`, `idea-to-implementation-doc`, `idea-to-ui-design-brief` |
-| `media` | `video-source-resolve` → `video-fetch` → `video-batch-runner`; `video-compression` |
-| `productivity` | `book-translate-and-voice`, `cost-model-today`, `image-ocr-to-docx`, `ocr-and-documents`, `overview-projects-on-computer`, `pdf-broken-text-layer-repair`, `project-knowledge-guides`, `save-to-google-drive`, `screenshot-to-docx`, `whatsapp-yt-links` |
+| `media` | `video-source-resolve` → `video-fetch` → `video-batch-runner`; `video-compression`, `video-dubbing-pipeline` |
+| `productivity` | `ai-provider-billing-dashboard`, `book-translate-and-voice`, `cost-model-today`, `image-ocr-to-docx`, `ocr-and-documents`, `overview-projects-on-computer`, `pdf-broken-text-layer-repair`, `project-knowledge-guides`, `save-to-google-drive`, `screenshot-to-docx`, `stt-whisper-gpu-windows`, `whatsapp-yt-links` |
+| `research` | `llm-knowledge-base` |
 | `software-development` | `coder-terminal-workflow`, `plan`, `robocopy-migration` |
+
+**Отложенные скиллы** (личные, вычищенные curator'ом по таймеру) лежат в `skills/.archive/`:
+в git — значит после `git pull` есть на всех ПК, но сканер скиллов пропускает `.archive`, поэтому
+они не попадают ни в перечень промпта, ни в `skill_view`. Возврат в работу — `git mv` в нужную
+категорию; подробности и манифест — в `skills/.archive/README.md`.
 
 `home-accounting` живёт в своём репо `HERMES-ALL-IN-ONE` и подключается через
 `skills.external_dirs` — здесь его нет.
