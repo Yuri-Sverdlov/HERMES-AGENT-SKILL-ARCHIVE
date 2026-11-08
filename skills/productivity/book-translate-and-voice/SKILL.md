@@ -17,6 +17,7 @@ metadata:
 - The user asks to translate a book/PDF into Russian, or to voice one ("озвучь книгу", "сделай аудио").
 - A batch of PDFs has to become audiobooks in one consistent format.
 - If the extracted text looks garbled (`writinN`, `coPer`), load `pdf-broken-text-layer-repair` first.
+- If the source text has to be pulled off a reading site (reader page, not a PDF), load `reader-page-text-capture` first — it covers the access gate, chapter iteration and cleaning.
 
 ## Pipeline (order matters)
 1. Extract text page-by-page with PyMuPDF (`import fitz`). Check `len(page.get_text())` and `page.get_images()` per page — empty text means a scan and needs OCR.
@@ -99,6 +100,8 @@ For 100+ chunks drive the API from a script: plain `urllib` POST to `https://ope
 - Count sections by pattern (`^\d{3} — раздел \d+\.mp3$`); a substring match on «раздел» also catches the index file.
 - Never rename or delete an output folder while a render writes into it: first verify the fresh copy (sections + combined + index), then delete the stale duplicate (one such duplicate was 938 MB).
 - Verify at the end: format (44 100 Hz / 2 ch / 192 kbps), non-silent audio (peak ≫ 0), combined duration == sum of sections (±1 s), seek at a >2 h offset with `ffmpeg -ss 02:00:00 -t 30 -i out.mp3 -f null -`.
+- **Prove the audio matches the CURRENT text, not a stale render.** Per section compute `chars(chunks_ru/NNN.md) / (duration_min × 60)`: RU Silero output lands near a median of 15 chars/s, so a section deviating by more than ~30 % is a candidate voiced from text that was edited afterwards. Sections under ~1 min (index/tail ones) always sit outside the band — that is the pause-to-speech ratio, not a defect.
+- The artefact the user actually reads is `<Book> — RU.md` per book: it is byte-for-byte the ordered concatenation of `chunks_ru/`, and chunk number `NNN` corresponds to section `NNN — раздел N.mp3`. When he asks "where is the translation", name all three layers — the per-book `RU.md`, `chunks_ru/NNN.md` (the exact text that was voiced) and the section index with timecodes for reading along.
 
 ## Pitfalls
 ### Never concat section mp3s with `-c copy`
