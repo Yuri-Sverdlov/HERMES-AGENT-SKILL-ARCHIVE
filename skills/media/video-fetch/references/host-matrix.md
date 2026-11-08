@@ -24,6 +24,7 @@ Referer/tokens that raw curl/aria2c cannot.
 | pbembed.me | `smart_dl.py` (HTTP Range) | server caps ~800 KB/s per IP — threads don't help |
 | strip2.in | resolve → `fp.spac.me` mp4 | ~280 KB/s single-thread; multi-thread unproven |
 | Yandex Video | not a host — resolve the pointer first | see `video-source-resolve` |
+| reddit.com/user/<u> | list via Arctic Shift API → `i.redd.it` straight into aria2c | reddit 403s this IP, even in a real browser. See section below |
 | redgifs.com | JSON API: temp token → `/v2/users/<u>/search` → `media.redgifs.com/<Slug>.mp4` into aria2c | hd URL is permanent and unsigned; no Referer, no login. See section below |
 | erome.com | `yt-dlp -g` then check Range | album pages carry many items |
 | ok.ru | `yt-dlp "<page-url>"` | usually works unmodified |
@@ -101,6 +102,43 @@ Generic extractor; the page embeds a signed mp4 from
 Full treatment in SKILL.md (DASH, format selection, SABR ladder, 2-job
 concurrency cap). The one-line summary: **update yt-dlp, never use `-N`, request
 `bestvideo…+bestaudio` explicitly.**
+
+### reddit.com (profiles, galleries, gifs)
+
+**The site itself is unreachable from this box.** `reddit.com/user/<u>/submitted.json`
+returns 403, and a real browser gets `You've been blocked by network security`
+after a `js_challenge` redirect loop (`title == "🐴"`). `old.reddit.com` is equally
+blocked. Redlib mirrors (`safereddit.com`, `redlib.privacyredirect.com`) answer 200
+but serve an Anubis / "Gandalf" proof-of-work wall — useless for curl. `yt-dlp`
+has no RedditUser extractor any more (`Unsupported URL`).
+
+**Listing: Arctic Shift API — no auth, works from here:**
+
+```bash
+curl -s "https://arctic-shift.photon-reddit.com/api/posts/search?author=<user>&limit=100&sort=desc"
+```
+
+Returns `{"data":[post…]}`, newest first. Paginate with
+`&before=<created_utc of the last item>`; a batch smaller than `limit` means done.
+`api.pullpush.io` (the other Pushshift successor) answered **526** — dead, don't
+waste a step on it.
+
+**Files: `i.redd.it` / `v.redd.it` is a different CDN and is NOT blocked** — no
+Referer, no cookies, Range supported. aria2c `-j 3 -x 8` does ~7 MiB/s per file
+(measured: 4.87 GB / 100 files in ~5 min).
+
+Post shapes that matter:
+
+- `post_hint == "image"` + `url_overridden_by_dest` on `i.redd.it` → exactly 1 file.
+- `is_gallery` → one file per `media_metadata[id].s.u` (HTML-escaped — `html.unescape`
+the `&amp;`). `e: AnimatedImage` / `m: image/gif` is a **gif**, i.e. one file.
+- `is_video: true` on an `i.redd.it/*.gif` is just an animated gif — there is no
+  DASH to merge. Only `v.redd.it` posts need yt-dlp per post.
+- **Count files, not posts.** One author's 100 newest posts yielded 228 media
+  files (50% galleries); the first 100 files covered only 40 posts.
+
+Verify images/gifs by size against HEAD `Content-Length` **plus** magic bytes
+(`GIF8`, `FF D8`, `\x89PNG`) — `verify_media.py` only understands video containers.
 
 ### redgifs.com
 Creator/profile pages are a **JSON API, not HTML to scrape**. Anonymous temp
