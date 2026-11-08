@@ -1,17 +1,5 @@
 [
  {
-  "name": "ai-provider-billing-dashboard",
-  "created_by": "agent",
-  "created": "2026-06-26",
-  "archived": "2026-10-02",
-  "use": 8,
-  "bundled": false,
-  "size": 12298,
-  "category": "productivity",
-  "files": 4,
-  "bytes": 28339
- },
- {
   "name": "directory-reconciliation",
   "created_by": "agent",
   "created": "2026-09-02",
@@ -22,18 +10,6 @@
   "category": "autonomous-ai-agents",
   "files": 2,
   "bytes": 8474
- },
- {
-  "name": "email-processing",
-  "created_by": "agent",
-  "created": "2026-07-23",
-  "archived": "2026-10-22",
-  "use": 8,
-  "bundled": false,
-  "size": 4691,
-  "category": "email",
-  "files": 4,
-  "bytes": 15640
  },
  {
   "name": "hermes-addon-project",
@@ -132,30 +108,6 @@
   "bytes": 28461
  },
  {
-  "name": "llm-knowledge-base",
-  "created_by": "agent",
-  "created": "2026-07-08",
-  "archived": "2026-10-22",
-  "use": 7,
-  "bundled": false,
-  "size": 14774,
-  "category": "research",
-  "files": 4,
-  "bytes": 25644
- },
- {
-  "name": "nsfw-scene-positioning",
-  "created_by": "agent",
-  "created": "2026-06-27",
-  "archived": "2026-10-22",
-  "use": 4,
-  "bundled": false,
-  "size": 4178,
-  "category": "creative",
-  "files": 4,
-  "bytes": 8283
- },
- {
   "name": "project-inventory",
   "created_by": "agent",
   "created": "2026-07-02",
@@ -180,18 +132,6 @@
   "bytes": 11508
  },
  {
-  "name": "stt-whisper-gpu-windows",
-  "created_by": "agent",
-  "created": "2026-09-08",
-  "archived": "2026-10-22",
-  "use": 7,
-  "bundled": false,
-  "size": 15713,
-  "category": "productivity",
-  "files": 3,
-  "bytes": 26642
- },
- {
   "name": "system-prompt-design",
   "created_by": "agent",
   "created": "2026-07-15",
@@ -204,6 +144,83 @@
   "bytes": 13022
  },
  {
+  "name": "youtube-download",
+  "created_by": "agent",
+  "created": "2026-08-10",
+  "archived": "2026-10-22",
+  "use": 5,
+  "bundled": false,
+  "size": 4501,
+  "category": "media",
+  "files": 1,
+  "bytes": 4501
+ },
+ {
+  "name": "ai-provider-billing-dashboard",
+  "created_by": "agent",
+  "created": "2026-06-26",
+  "archived": "2026-10-02",
+  "use": 8,
+  "bundled": false,
+  "size": 12298,
+  "category": "productivity",
+  "files": 4,
+  "bytes": 28339,
+  "moved_back_to": "skills/productivity/ai-provider-billing-dashboard"
+ },
+ {
+  "name": "email-processing",
+  "created_by": "agent",
+  "created": "2026-07-23",
+  "archived": "2026-10-22",
+  "use": 8,
+  "bundled": false,
+  "size": 4691,
+  "category": "email",
+  "files": 4,
+  "bytes": 15640,
+  "moved_back_to": "skills/email/email-processing"
+ },
+ {
+  "name": "llm-knowledge-base",
+  "created_by": "agent",
+  "created": "2026-07-08",
+  "archived": "2026-10-22",
+  "use": 7,
+  "bundled": false,
+  "size": 14774,
+  "category": "research",
+  "files": 4,
+  "bytes": 25644,
+  "moved_back_to": "skills/research/llm-knowledge-base"
+ },
+ {
+  "name": "nsfw-scene-positioning",
+  "created_by": "agent",
+  "created": "2026-06-27",
+  "archived": "2026-10-22",
+  "use": 4,
+  "bundled": false,
+  "size": 4178,
+  "category": "creative",
+  "files": 4,
+  "bytes": 8283,
+  "moved_back_to": "skills/creative/nsfw-scene-positioning"
+ },
+ {
+  "name": "stt-whisper-gpu-windows",
+  "created_by": "agent",
+  "created": "2026-09-08",
+  "archived": "2026-10-22",
+  "use": 7,
+  "bundled": false,
+  "size": 15713,
+  "category": "productivity",
+  "files": 3,
+  "bytes": 26642,
+  "moved_back_to": "skills/productivity/stt-whisper-gpu-windows"
+ },
+ {
   "name": "user-style-yuri",
   "created_by": "agent",
   "created": "2026-07-24",
@@ -213,7 +230,8 @@
   "size": 10132,
   "category": "autonomous-ai-agents",
   "files": 2,
-  "bytes": 16213
+  "bytes": 16213,
+  "moved_back_to": "skills/autonomous-ai-agents/user-style-yuri"
  },
  {
   "name": "video-dubbing-pipeline",
@@ -225,18 +243,7 @@
   "size": 21622,
   "category": "media",
   "files": 5,
-  "bytes": 52412
- },
- {
-  "name": "youtube-download",
-  "created_by": "agent",
-  "created": "2026-08-10",
-  "archived": "2026-10-22",
-  "use": 5,
-  "bundled": false,
-  "size": 4501,
-  "category": "media",
-  "files": 1,
-  "bytes": 4501
+  "bytes": 52412,
+  "moved_back_to": "skills/media/video-dubbing-pipeline"
  }
 ]
