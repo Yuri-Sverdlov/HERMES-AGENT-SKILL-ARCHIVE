@@ -32,4 +32,7 @@ Thumbs.db
 .bundled_manifest*
 .locks/
 .hub/
-.archive/
+/.archive/
+
+# skills/.archive — намеренно В git: отложенные скиллы (см. skills/.archive/README.md).
+# Правило выше глушило бы и его, поэтому оно ограничено корнем репозитория (/.archive/).
