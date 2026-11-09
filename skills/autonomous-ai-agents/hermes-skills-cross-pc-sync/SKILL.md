@@ -41,7 +41,7 @@ metadata:
 У Юрия 3 машины (ПК1, ПК2, ноутбук). Цель: находки и новые скиллы с любой машины
 доступны на остальных. Общий хаб скиллов — **приватный** репозиторий
 `Yuri-Sverdlov/HERMES-AGENT-SKILL-ARCHIVE`, клон на **всех** ПК по одному пути
-`E:\_MY-PROGRAMMING\HERMES-AGENT-SKILL-ARCHIVE` (скиллы — в `skills/<категория>/<имя>/`).
+`G:\_MY-PROGRAMMING_1\HERMES-AGENT-SKILL-ARCHIVE` (скиллы — в `skills/<категория>/<имя>/`).
 Правила синхронизации описаны в его `SYNC-LOGIC.md` —
 прочитай его перед любыми изменениями. Старый хаб `Yuri-Sverdlov/HERMES-AGENT`
 (архитектор↔кодер, guides/) содержит устаревшие копии `SOURCES-ARCHIVE*` — не
@@ -55,7 +55,7 @@ metadata:
 
 ```yaml
 skills:
-  create_dir: E:/_MY-PROGRAMMING/HERMES-AGENT-SKILL-ARCHIVE/skills   # читается И сюда же пишутся новые скиллы
+  create_dir: G:/_MY-PROGRAMMING_1/HERMES-AGENT-SKILL-ARCHIVE/skills   # читается И сюда же пишутся новые скиллы
 ```
 
 `create_dir` сам по себе сканируется как полноценная папка скиллов — дублировать

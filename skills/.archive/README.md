@@ -19,7 +19,7 @@
 Категория для возврата указана для каждого скилла в `_MANIFEST.json`.
 
 ```bash
-cd /e/_MY-PROGRAMMING/HERMES-AGENT-SKILL-ARCHIVE
+cd /g/_MY-PROGRAMMING_1/HERMES-AGENT-SKILL-ARCHIVE
 git mv skills/.archive/<имя> skills/<категория>/<имя>     # напр. skills/media/<имя>
 git commit -m "<имя>: возвращён в работу"
 git push

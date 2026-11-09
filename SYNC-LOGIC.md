@@ -22,7 +22,7 @@ GitHub-репозиторий: https://github.com/Yuri-Sverdlov/HERMES-AGENT-SKI
 ```yaml
 # %LOCALAPPDATA%\hermes\config.yaml
 skills:
-  create_dir: E:/_MY-PROGRAMMING/HERMES-AGENT-SKILL-ARCHIVE/skills
+  create_dir: G:/_MY-PROGRAMMING_1/HERMES-AGENT-SKILL-ARCHIVE/skills
 ```
 
 - Hermes читает скиллы из этой папки (`create_dir` сканируется как полноценная
@@ -43,7 +43,7 @@ skills:
 ## 3. Ежедневный цикл
 
 ```bash
-cd /e/_MY-PROGRAMMING/HERMES-AGENT-SKILL-ARCHIVE
+cd /g/_MY-PROGRAMMING_1/HERMES-AGENT-SKILL-ARCHIVE
 git pull                      # перед работой
 # ... работа в Hermes: скиллы создаются и правятся прямо здесь ...
 git add -A

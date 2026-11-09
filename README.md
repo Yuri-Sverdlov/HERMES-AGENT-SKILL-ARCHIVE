@@ -19,7 +19,7 @@ Word-версии руководств кладём рядом с их markdown 
 На **каждом** ПК репозиторий клонирован по одному и тому же пути:
 
 ```
-E:\_MY-PROGRAMMING\HERMES-AGENT-SKILL-ARCHIVE
+G:\_MY-PROGRAMMING_1\HERMES-AGENT-SKILL-ARCHIVE
 ```
 
 и подключён к Hermes напрямую: Hermes читает скиллы **из этой папки** и сюда же
@@ -29,7 +29,7 @@ E:\_MY-PROGRAMMING\HERMES-AGENT-SKILL-ARCHIVE
 ```yaml
 # %LOCALAPPDATA%\hermes\config.yaml
 skills:
-  create_dir: E:/_MY-PROGRAMMING/HERMES-AGENT-SKILL-ARCHIVE/skills
+  create_dir: G:/_MY-PROGRAMMING_1/HERMES-AGENT-SKILL-ARCHIVE/skills
 ```
 
 Ежедневно: `git pull` перед работой, `git add -A && git commit && git push` после.

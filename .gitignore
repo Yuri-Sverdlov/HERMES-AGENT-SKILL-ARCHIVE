@@ -22,6 +22,9 @@ secrets.*
 !guides/
 !guides/**
 
+# Служебные файлы Word/Office (замки открытых документов)
+~$*
+
 # Python / служебное
 __pycache__/
 *.pyc
