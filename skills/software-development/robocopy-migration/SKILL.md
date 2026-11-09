@@ -45,6 +45,22 @@ $dst = (Get-ChildItem "DST" -Recurse -File).Count
 
 Do not count migration complete without match=True. On mismatch — re-run robocopy.
 
+### 2a. Repo or tool folder that a program consumes via config
+
+A migrated folder is often not just files — a tool reads it by an absolute path from its own config.
+Copying alone leaves the tool pointing at the old disk. Order:
+
+1. Copy + verify counts/bytes (steps 1-2).
+2. Repoint every config that names the old path, then prove it with the tool's OWN command, not by
+   reading the file back: `hermes config get skills.create_dir` (other tools: their config get/show CLI).
+3. Rescan trees for stale path references (step 3) and patch them — including docs, READMEs, and the
+   tool's own skills/notes, so the next machine clones to the same place.
+4. Run the tool's remote-touching command **from the new copy** (`git push`, `git fetch`) — that is the
+   proof that remotes, credentials and hooks still work from the new location.
+5. Only then retire the old copy: agent never deletes originals. If renaming the folder fails with
+   `Access denied` while files INSIDE it can still be renamed, some process holds the folder itself open
+   as a directory — close Explorer/Word/editors pointed at it and let the user delete it by hand.
+
 ### 3. Scan — find hardcoded source-disk paths
 
 Write a **temporary `.ps1` file**, not inline `pwsh -Command` — nested quotes break.
@@ -106,6 +122,9 @@ Lines like `- **From:** G:\AI\...` in migration history — do not patch (not li
 - Large files (22 GB): robocopy needs timeout=600+ or background
 - Max 2 parallel robocopy with /MT:16 — disk saturation
 - Never delete originals via agent (`rm -rf` blocked) — Explorer only
+- Scan with ripgrep (`search_files`), not a recursive walk in Python/PowerShell: walking a huge tree
+  (a user profile with caches, sessions, model files) blows past the tool timeout and wastes the whole
+  call. Restrict the pattern to the path forms you are replacing and set a file-extension filter.
 - Do not migrate `.venv` — recreate on target PC
 - Dedupe scan results: `Sort-Object -Unique`
 
