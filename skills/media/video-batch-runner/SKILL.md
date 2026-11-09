@@ -178,6 +178,33 @@ Then, separately, `failed` and `skipped` items with their reasons. Clean up
 7. **Background-first, always.** Even a single throttled item eats the 300 s
    foreground timeout and dies, taking yt-dlp with it.
 
+## Already-have check and collection-scale dedupe
+
+When the same creator (or a sibling account) may be downloaded again, run two
+separate checks — they catch different things:
+
+**1. By id, before downloading.** Build the set of existing file stems across
+*every* output folder, not just the target one, and filter the new list against
+it. This is what makes a repeat request a no-op (measured: a 266-item account
+re-requested yielded `new=0 dup=266`). Also report ids present on disk but
+**absent from the API** — that means the author deleted the post, not that your
+download is corrupt.
+
+**2. By content, after downloading.** Duplicate ids ≠ duplicate bytes: creators
+re-upload the same clip under a new id, and two accounts repost each other.
+Do not hash the whole library — group files by **size** first (equal bytes imply
+equal size), then sha1 only the groups with more than one member. On a 1.8k-file
+/ 35 GB collection this reduced 1811 hashes to 11 candidate groups and finished
+in about a second.
+
+When a duplicate pair is found, keep the **earlier** post — the original carries
+the views and the later one is the re-upload (measured pairs: 21 520 vs 2 209
+views; 624 vs 79). Announce which file you kept and why before deleting.
+
+Exact hashing only catches **byte-identical** copies. The same clip re-encoded at
+a different bitrate will not be flagged — say so when reporting, rather than
+implying the collection is fully de-duplicated.
+
 ## Resuming an interrupted batch
 
 1. Read the manifest. Items left `running` are the crash victims.
@@ -206,6 +233,9 @@ completeness from file sizes.
 8. **MSYS paths as script arguments.** `/f/_DOWNLOADS/...` is invisible to
    Python (`file does not exist`). Use `F:/_DOWNLOADS/...` for script args, even
    though MSYS paths work in the shell itself.
+9. **Hashing the whole library to find duplicates.** Group by size first; only
+   files sharing a size can be identical. And remember the check is
+   byte-exact — a re-encode of the same clip stays invisible to it.
 
 ## Verification
 
