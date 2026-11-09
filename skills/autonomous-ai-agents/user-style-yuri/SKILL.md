@@ -41,6 +41,10 @@ Yuri works in strict alternating cycles:
 
 Every substantive coding task is followed by a checkpoint commit before the next work begins (DEV-NOTES §10). TASK.md headers explicitly say `Git: НЕ разрешён` or `Git: РАЗРЕШЕНО`. Obey literally — do not commit unless the TASK says yes.
 
+**Исключение — репозиторий скиллов** `HERMES-AGENT-SKILL-ARCHIVE`: там правка скилла завершается
+`git add/commit/push` сразу, без задания из TASK.md и без вопроса «коммитить?». Детали — скилл
+`hermes-skills-cross-pc-sync` («ЖЕЛЕЗНОЕ ПРАВИЛО»).
+
 ## Language
 
 - Default to **Russian** for prose, code comments, and explanations.
